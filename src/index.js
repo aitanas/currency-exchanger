@@ -25,10 +25,17 @@ function printConversion(response, currency1, currency2, amount) {
 
 function printError(error, currency1, currency2, amount) {
   document.querySelector('#response').innerText = `There was an error accessing the currency exchange data for ${currency1} and/or ${currency2}:
-  ${response[`error-type`]}.`
+  ${error}.`
 }
 
-function handleFormSubmission(event) {
+function handleSubmission(event) {
   event.preventDefault();
-
+  const currency1 = document.getElementById("currency1").value;
+  const currency2 = document.getElementById("currency2").value;
+  const amount = document.getElementById("amount").value;
+  exchange(currency1, currency2, amount);
 }
+
+window.addEventListener("load", () => {
+  document.getElementById("#currency").addEventListener("submit", handleSubmission);
+})
