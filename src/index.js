@@ -25,8 +25,11 @@ function printConversion(response, currency, amount) {
     document.querySelector('#response').innerText = `$${amount} USD exchanged to ${currency} comes out to ${response['conversion_result']} ${currency}.
     Exchange rate: ${response.conversion_rate}`; 
   } else {
-    document.querySelector('#response').innerText = `Error: The currency entered is invalid.`
+    document.querySelector('#response').innerHTML = "<span><strong>Error:</strong> The currency entered is invalid."
   }
+  if (isNaN(amount)) {
+    document.querySelector('#response').innerHTML = "<span><strong>Error:</strong> The amount entered is invalid."
+  } 
 }
 
 function printError(error, currency) {
