@@ -16,6 +16,7 @@ Currency Exchanger is a web application that uses a third party API and JavaScri
 ## Setup/Installation Requirements
 
 To view this application, it must be cloned to your personal machine.
+
 **You will need:**
 * A code editor, such as VS Code
 * Git. Installation instructions vary depending on your OS, so please check [this page on installing Git](https://github.com/git-guides/install-git)
@@ -27,7 +28,7 @@ Instructions to get your personal key are as follows:
 2. Enter your e-mail address and click **"Get Free Key!"**. *Make sure to keep this private!*
 3. Finish creating your account. Your key should now be ready to use.
 
-### Then, go ahead and clone this repository by pasting the following command into your terminal:
+### Then, clone this repository by pasting the following command into your terminal:
 ```
 git clone https://github.com/aitanas/currency-exchanger.git
 ```
