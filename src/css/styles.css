@@ -1,6 +1,13 @@
+@import url('./node_modules/bootstrap-icons/font/bootstrap-icons.css');
+
 .container {
   display: flex;
   padding: 2rem;
+}
+
+.nav-text {
+  color:rgb(224, 222, 220);
+  font-weight: 300;
 }
 
 #exchange {
