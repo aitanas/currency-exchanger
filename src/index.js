@@ -10,8 +10,9 @@ function exchange(currency1, currency2, amount) {
     .then(function(response) {
       if (response) {
         printConversion(response, currency1, currency2, amount);
+        console.log(response);
       } else {
-        printError(response, currency1, currency2, amount);
+        printError(response, currency1, currency2);
       }
     });
 }
@@ -20,12 +21,13 @@ function exchange(currency1, currency2, amount) {
 // UI Logic
 
 function printConversion(response, currency1, currency2, amount) {
-  document.querySelector('#response').innerText = `${amount}${currency1} exchanged to ${currency2} comes out to ${response.conversion_result}${currency2}.`
+  document.querySelector('#response').innerText = `${amount} ${currency1} exchanged to ${currency2} comes out to ${response['conversion_result']} ${currency2}.
+  Exchange rate: ${response.conversion_rate}`;
 }
 
-function printError(error, currency1, currency2, amount) {
+function printError(error, currency1, currency2) {
   document.querySelector('#response').innerText = `There was an error accessing the currency exchange data for ${currency1} and/or ${currency2}:
-  ${error}.`
+  ${error}.`;
 }
 
 function handleSubmission(event) {
@@ -37,5 +39,5 @@ function handleSubmission(event) {
 }
 
 window.addEventListener("load", () => {
-  document.getElementById("#currency").addEventListener("submit", handleSubmission);
-})
+  document.getElementById("currency").addEventListener("submit", handleSubmission);
+});
