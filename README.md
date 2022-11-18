@@ -1,42 +1,53 @@
-# Project Name
-### A project by
+# Currency Exchanger
+### A project by Aitana Shough
 
-##### Description
-
-###### Description 2
+Currency Exchanger is a web application that uses third party APIs to convert USD to multiple forms of currency.
 
 ## Technologies Used
 
-* JavaScript
+* JavaScript, Node.js
 * HTML / CSS
 * webpack
 * Bootstrap
 * ES Lint
 * Babel
-* Jest
+* Dotenv
 
 ## Setup/Installation Requirements
 
-This project may be viewed online via the corresponding [**GitHub pages site**]().
+#### This project may be viewed online via the corresponding [**GitHub pages site**](https://aitanas.github.io/currency-exchanger).
 
-Alternatively, you may clone this project to your local machine by using the following command:
+Alternatively, you may clone this project to your local machine.
+
+#### You will need an **API Key** from [ExchangeRate-API](https://www.exchangerate-api.com/).
+Instructions to get your personal key are as follows:
+1. Navigate to the main ExchangeRate-API page by clicking the link above or by copy and pasting `https://www.exchangerate-api.com/` in your browser address bar.
+2. Enter your e-mail address and click **"Get Free Key!**. *Make sure to keep this private!*
+
+#### Then, go ahead and clone this repository by pasting the following command into your terminal:
 ```
-git clone https://github.com/
+git clone https://github.com/aitanas/currency-exchanger.git
 ```
 Directions after cloning are as follows:
-1. Open the **REPO** directory.
-2. Open the file named **index.html** with an internet browser (i.e. Google Chrome) of your choice.
-3. Enjoy!
+1. Open the **currecy-exchanger** directory.
+2. Within the root directory, create a file named **.env**. This is where your personal API key will be stored. Type the following into your .env file, making sure to replace {YOUR-KEY-HERE} with the key from ExchangeRate-API:
+```
+API_KEY={YOUR-KEY-HERE}
+```
+3. Save the .env file and navigate back to the root directory using your terminal.
+4. Install all Node packages and dependencies with the command `npm install`.
+5. Package and open the project in your browser using `npm run start`.
+6. Enjoy!
 
 ## Known Bugs
 
-* 
+* None at this time.
 
 ## License
 
 **MIT License**
 
-Copyright (c) 2022 
+Copyright (c) 2022 Aitana Shough
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
