@@ -8,7 +8,7 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-4">
         <h5 class="text-white h4">USD Currency Exchange</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+        <span class="text-muted">Thanks for checking out my project! View more of my work at <a href="https://github.com/aitanas">my github</a>.</span>
       </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -23,13 +23,21 @@
     </div>
     <form id="exchange">
       <div class="form-group">
-        <label for="amount" block>Enter USD amount to exchange</label><br>
-        <input type="text" id="amount" placeholder="Amount in USD">
+        <label for="amount" block>Enter amount to exchange</label><br>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">$</span>
+          </div>
+          <input type="text" type="text" id="amount" placeholder="Amount in USD" class="form-control" aria-describedby="basic-addon1">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="currency">Select currency you'd like to exchange to</label><br>
-        <select id="currency">
-          <option value="">--Please choose a currency--</option>
+      <label for="currency">Select currency to exchange to</label><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Currency</label>
+        </div>
+        <select id="currency" class="custom-select" aria-describedby="basic-addon1">
+          <option value="">Choose...</option>
           <option value="EUR">EUR - Euro</option>
           <option value="GBP">GBP - Pound Sterling</option>
           <option value="CAD">CAD - Canadian Dollar</option>
@@ -40,11 +48,10 @@
           <option value="CNY">CNY - Chinese Renminbi</option>
         </select>
       </div>
-      
       <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">Submit</button>
     </form>
     <div id="response">
-
+      <!-- Form response will go here -->
     </div>
   </div>
 </body>
