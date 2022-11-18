@@ -2,12 +2,13 @@
 <html lang="US-en">
 <head>
   <title>USD Currency Exchange</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container mx-auto px-4">
     <h1>USD Currency Exchange</h1>
     <form id="exchange">
-      <label for="amount">Enter USD amount to exchange:</label>
+      <label for="amount" block>Enter USD amount to exchange:</label>
       <input type="text" id="amount" placeholder="Amount in USD"><br>
       <label for="currency">Select currency you'd like to exchange to:</label>
       <select id="currency">
@@ -22,7 +23,7 @@
         <option value="CNY">CNY - Chinese Renminbi</option>
       </select>
       <br>
-      <button type="submit">Submit</button>
+      <button type="submit" class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Submit</button>
     </form>
     <div id="response">
 
