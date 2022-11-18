@@ -10,7 +10,6 @@ function exchange(currency, amount) {
     .then(function(response) {
       if (response) {
         printConversion(response, currency, amount);
-        console.log(response);
       } else {
         printError(response, currency);
       }
@@ -21,8 +20,13 @@ function exchange(currency, amount) {
 // UI Logic
 
 function printConversion(response, currency, amount) {
-  document.querySelector('#response').innerText = `$${amount} USD exchanged to ${currency} comes out to ${response['conversion_result']} ${currency}.
-  Exchange rate: ${response.conversion_rate}`;
+  const validCurrency = ['EUR', 'GBP', 'CAD', 'ISK', 'GTQ', 'JPY', 'KRW', 'CNY'];
+  if (validCurrency.includes(currency)) {
+    document.querySelector('#response').innerText = `$${amount} USD exchanged to ${currency} comes out to ${response['conversion_result']} ${currency}.
+    Exchange rate: ${response.conversion_rate}`; 
+  } else {
+    document.querySelector('#response').innerText = `Error: The currency entered is invalid.`
+  }
 }
 
 function printError(error, currency) {
