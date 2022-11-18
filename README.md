@@ -15,22 +15,23 @@ Currency Exchanger is a web application that uses third party APIs to convert US
 
 ## Setup/Installation Requirements
 
-#### This project may be viewed online via the corresponding [**GitHub pages site**](https://aitanas.github.io/currency-exchanger).
+### This project may be viewed online via the corresponding [**GitHub pages site**](https://aitanas.github.io/currency-exchanger).
 
 Alternatively, you may clone this project to your local machine.
 
-#### You will need an **API Key** from [ExchangeRate-API](https://www.exchangerate-api.com/).
+### You will need an **API Key** from [ExchangeRate-API](https://www.exchangerate-api.com/).
 Instructions to get your personal key are as follows:
-1. Navigate to the main ExchangeRate-API page by clicking the link above or by copy and pasting `https://www.exchangerate-api.com/` in your browser address bar.
-2. Enter your e-mail address and click **"Get Free Key!**. *Make sure to keep this private!*
+1. Navigate to the main ExchangeRate-API page by clicking the link above or by copy and pasting `https://www.exchangerate-api.com/` in your browser's address bar.
+2. Enter your e-mail address and click **"Get Free Key!"**. *Make sure to keep this private!*
 
-#### Then, go ahead and clone this repository by pasting the following command into your terminal:
+### Then, go ahead and clone this repository by pasting the following command into your terminal:
 ```
 git clone https://github.com/aitanas/currency-exchanger.git
 ```
 Directions after cloning are as follows:
 1. Open the **currecy-exchanger** directory.
-2. Within the root directory, create a file named **.env**. This is where your personal API key will be stored. Type the following into your .env file, making sure to replace {YOUR-KEY-HERE} with the key from ExchangeRate-API:
+2. Within the root directory, create a file named **.env**. This is where your personal API key will be stored. 
+Type the following into your .env file, making sure to replace {YOUR-KEY-HERE} with the key from ExchangeRate-API:
 ```
 API_KEY={YOUR-KEY-HERE}
 ```
